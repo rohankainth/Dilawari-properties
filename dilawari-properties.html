@@ -1,0 +1,1689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dilawari Properties – Trusted Property Dealer in Paharganj, Delhi</title>
+  <meta name="description" content="Dilawari Properties – Your Trusted Property Partner in Paharganj, Delhi. Buy, sell, and rent residential & commercial properties in Paharganj, Karol Bagh, Connaught Place, NDMC and surrounding areas." />
+  <meta name="keywords" content="property dealer Paharganj, real estate Delhi, buy property Delhi, rent property Paharganj, Dilawari Properties, Karol Bagh property, Connaught Place real estate" />
+  <meta name="author" content="Dilawari Properties" />
+  <meta property="og:title" content="Dilawari Properties – Trusted Property Partner in Paharganj, Delhi" />
+  <meta property="og:description" content="Buy, sell, rent properties in Paharganj, Karol Bagh, Connaught Place & more. 25+ years of trust." />
+  <meta property="og:type" content="website" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS Animate On Scroll -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              orange: '#FF6200',
+              navy:   '#0A2540',
+              gold:   '#F5A623',
+              light:  '#FFF7F2',
+              dark:   '#050F1A',
+            }
+          },
+          fontFamily: {
+            display: ['Playfair Display', 'serif'],
+            body:    ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ============================
+       GLOBAL & RESET
+    ============================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #0A2540; overflow-x: hidden; }
+    ::selection { background: #FF6200; color: #fff; }
+
+    /* ============================
+       SCROLLBAR
+    ============================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0A2540; }
+    ::-webkit-scrollbar-thumb { background: #FF6200; border-radius: 3px; }
+
+    /* ============================
+       NAVBAR
+    ============================ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      transition: all 0.4s cubic-bezier(.4,0,.2,1);
+      padding: 1.25rem 0;
+    }
+    #navbar.scrolled {
+      background: rgba(10, 37, 64, 0.92);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      padding: 0.6rem 0;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.25);
+    }
+    .nav-link {
+      position: relative;
+      color: rgba(255,255,255,0.85);
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: color 0.25s;
+      padding: 0.25rem 0;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute; bottom: -2px; left: 0; right: 100%;
+      height: 2px; background: #FF6200;
+      transition: right 0.3s ease;
+    }
+    .nav-link:hover { color: #FF6200; }
+    .nav-link:hover::after { right: 0; }
+
+    /* ============================
+       HERO
+    ============================ */
+    #hero {
+      min-height: 100vh;
+      background: 
+        linear-gradient(135deg, rgba(10,37,64,0.90) 0%, rgba(10,37,64,0.70) 40%, rgba(255,98,0,0.30) 100%),
+        url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=90') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-parallax { transition: transform 0.1s linear; }
+
+    /* Floating orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.12;
+      animation: drift 8s ease-in-out infinite;
+    }
+    .orb1 { width: 420px; height: 420px; background: #FF6200; top: -120px; right: -80px; animation-delay: 0s; }
+    .orb2 { width: 260px; height: 260px; background: #F5A623; bottom: 60px; left: -60px; animation-delay: 3s; }
+    .orb3 { width: 180px; height: 180px; background: #FF6200; top: 40%; left: 30%; animation-delay: 5s; }
+
+    @keyframes drift {
+      0%, 100% { transform: translateY(0) scale(1); }
+      50%       { transform: translateY(-30px) scale(1.06); }
+    }
+
+    /* Particles */
+    .particle {
+      position: absolute;
+      width: 4px; height: 4px;
+      background: #FF6200;
+      border-radius: 50%;
+      opacity: 0.5;
+      animation: float-up linear infinite;
+    }
+    @keyframes float-up {
+      0%   { transform: translateY(0) translateX(0); opacity: 0.6; }
+      100% { transform: translateY(-100vh) translateX(20px); opacity: 0; }
+    }
+
+    /* Headline shimmer */
+    .shimmer-text {
+      background: linear-gradient(90deg, #ffffff 0%, #F5A623 40%, #FF6200 60%, #ffffff 100%);
+      background-size: 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer { 0% { background-position: 200% center; } 100% { background-position: -200% center; } }
+
+    /* CTA glow */
+    .btn-primary {
+      background: linear-gradient(135deg, #FF6200, #e55500);
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s, box-shadow 0.25s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      box-shadow: 0 0 0 0 rgba(255,98,0,0.4);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(255,98,0,0.45), 0 0 0 6px rgba(255,98,0,0.12);
+    }
+    .btn-primary::before {
+      content: '';
+      position: absolute; top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .btn-primary:hover::before { left: 100%; }
+
+    .btn-outline {
+      border: 2px solid rgba(255,255,255,0.6);
+      color: #fff;
+      padding: 0.85rem 2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      backdrop-filter: blur(4px);
+    }
+    .btn-outline:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: #FF6200;
+      color: #FF6200;
+      transform: translateY(-3px);
+    }
+
+    /* ============================
+       SECTION DIVIDERS
+    ============================ */
+    .wave-divider { overflow: hidden; line-height: 0; }
+    .wave-divider svg { display: block; }
+
+    /* ============================
+       SERVICE CARDS
+    ============================ */
+    .service-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.35s;
+      border: 1px solid #f0e8e0;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, #FF6200, #F5A623);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .service-card:hover { transform: translateY(-10px); box-shadow: 0 30px 60px rgba(255,98,0,0.15); }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 64px; height: 64px;
+      background: linear-gradient(135deg, rgba(255,98,0,0.12), rgba(245,166,35,0.1));
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.6rem; color: #FF6200;
+      transition: transform 0.35s cubic-bezier(.4,0,.2,1), background 0.35s;
+      margin-bottom: 1.2rem;
+    }
+    .service-card:hover .service-icon {
+      transform: rotate(8deg) scale(1.15);
+      background: linear-gradient(135deg, #FF6200, #F5A623);
+      color: #fff;
+    }
+
+    /* ============================
+       STATS
+    ============================ */
+    .stat-card {
+      background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 24px;
+      backdrop-filter: blur(12px);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(255,98,0,0.4);
+    }
+
+    /* ============================
+       PROPERTY CARDS
+    ============================ */
+    .property-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(10,37,64,0.08);
+      transition: transform 0.35s, box-shadow 0.35s;
+      position: relative;
+    }
+    .property-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(10,37,64,0.18); }
+    .property-img-wrap { position: relative; overflow: hidden; height: 220px; }
+    .property-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(.4,0,.2,1); }
+    .property-card:hover .property-img-wrap img { transform: scale(1.12); }
+    .property-badge {
+      position: absolute; top: 14px; left: 14px;
+      background: linear-gradient(135deg, #FF6200, #e55500);
+      color: #fff; font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 0.3rem 0.85rem; border-radius: 50px;
+    }
+    .property-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(10,37,64,0.85) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.4s;
+      display: flex; align-items: flex-end; justify-content: center; padding-bottom: 1.5rem;
+    }
+    .property-card:hover .property-overlay { opacity: 1; }
+
+    /* ============================
+       GALLERY
+    ============================ */
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 14px;
+      cursor: pointer;
+      position: relative;
+    }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(10,37,64,0.7);
+      opacity: 0; display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.35s;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+    .filter-btn {
+      padding: 0.55rem 1.5rem;
+      border-radius: 50px;
+      font-weight: 600; font-size: 0.82rem;
+      letter-spacing: 0.05em; text-transform: uppercase;
+      border: 2px solid #e2e8f0;
+      color: #64748b;
+      transition: all 0.25s;
+      cursor: pointer;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg, #FF6200, #e55500);
+      border-color: #FF6200; color: #fff;
+    }
+    .gallery-item.hidden { display: none; }
+
+    /* Lightbox */
+    #lightbox {
+      position: fixed; inset: 0; z-index: 9999;
+      background: rgba(5,15,26,0.96);
+      display: none; align-items: center; justify-content: center;
+      padding: 1rem;
+      animation: fadeIn 0.3s ease;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 90vw; max-height: 85vh; border-radius: 12px; box-shadow: 0 40px 80px rgba(0,0,0,0.6); }
+    #lightbox-close {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      color: #fff; font-size: 2rem; cursor: pointer;
+      width: 48px; height: 48px;
+      background: rgba(255,98,0,0.7); border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s, transform 0.2s;
+    }
+    #lightbox-close:hover { background: #FF6200; transform: rotate(90deg); }
+
+    /* ============================
+       TESTIMONIALS
+    ============================ */
+    .testimonial-track { display: flex; transition: transform 0.6s cubic-bezier(.4,0,.2,1); }
+    .testimonial-slide { min-width: 100%; }
+    .quote-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 2.5rem;
+      box-shadow: 0 8px 40px rgba(10,37,64,0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    .quote-card::before {
+      content: '"';
+      position: absolute; top: -10px; left: 20px;
+      font-family: 'Playfair Display', serif;
+      font-size: 8rem; color: rgba(255,98,0,0.1);
+      line-height: 1;
+    }
+
+    /* ============================
+       CONTACT FORM
+    ============================ */
+    .form-input {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 0.9rem;
+      color: #0A2540;
+      background: #fff;
+      transition: border-color 0.25s, box-shadow 0.25s;
+      outline: none;
+    }
+    .form-input:focus {
+      border-color: #FF6200;
+      box-shadow: 0 0 0 4px rgba(255,98,0,0.1);
+    }
+    .form-input::placeholder { color: #94a3b8; }
+
+    /* Success toast */
+    #form-success {
+      display: none;
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: #fff;
+      border-radius: 14px;
+      padding: 1.2rem 1.5rem;
+      animation: slideUp 0.5s ease;
+    }
+    @keyframes slideUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
+
+    /* ============================
+       FLOATING BUTTONS
+    ============================ */
+    .fab {
+      position: fixed;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      z-index: 900;
+      transition: transform 0.25s, box-shadow 0.25s;
+      cursor: pointer;
+    }
+    .fab:hover { transform: scale(1.15); }
+    .fab-whatsapp {
+      bottom: 24px; right: 24px;
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: #fff;
+      animation: pulse-green 2.5s ease-in-out infinite;
+    }
+    .fab-call {
+      bottom: 92px; right: 24px;
+      background: linear-gradient(135deg, #FF6200, #e55500);
+      color: #fff;
+      animation: pulse-orange 2.5s ease-in-out infinite 0.6s;
+    }
+    @keyframes pulse-green {
+      0%, 100% { box-shadow: 0 8px 32px rgba(37,211,102,0.35), 0 0 0 0 rgba(37,211,102,0.4); }
+      50%       { box-shadow: 0 8px 32px rgba(37,211,102,0.55), 0 0 0 12px rgba(37,211,102,0); }
+    }
+    @keyframes pulse-orange {
+      0%, 100% { box-shadow: 0 8px 32px rgba(255,98,0,0.35), 0 0 0 0 rgba(255,98,0,0.4); }
+      50%       { box-shadow: 0 8px 32px rgba(255,98,0,0.55), 0 0 0 12px rgba(255,98,0,0); }
+    }
+
+    /* ============================
+       BACK TO TOP
+    ============================ */
+    #back-to-top {
+      position: fixed; bottom: 24px; left: 24px; z-index: 900;
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, #0A2540, #163d66);
+      color: #fff; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.35s, transform 0.35s;
+      box-shadow: 0 6px 24px rgba(10,37,64,0.35);
+    }
+    #back-to-top.visible { opacity: 1; pointer-events: all; }
+    #back-to-top:hover { transform: translateY(-4px); }
+
+    /* ============================
+       MOBILE MENU
+    ============================ */
+    #mobile-menu {
+      position: fixed; inset: 0; z-index: 999;
+      background: rgba(10,37,64,0.98);
+      backdrop-filter: blur(20px);
+      display: none; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 2rem;
+    }
+    #mobile-menu.open { display: flex; animation: fadeIn 0.3s ease; }
+    .mobile-nav-link {
+      color: #fff; font-size: 1.5rem; font-weight: 600;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      transition: color 0.25s;
+    }
+    .mobile-nav-link:hover { color: #FF6200; }
+
+    /* ============================
+       MISC UTILITY
+    ============================ */
+    .section-eyebrow {
+      font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #FF6200;
+      display: flex; align-items: center; gap: 0.6rem;
+    }
+    .section-eyebrow::before, .section-eyebrow::after {
+      content: ''; flex: 1; height: 1px; background: currentColor; opacity: 0.35;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #FF6200, #F5A623);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+    }
+    .angled-section {
+      clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
+    }
+
+    /* Loading spinner */
+    .spinner {
+      width: 22px; height: 22px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      display: inline-block;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* Timeline */
+    .timeline-item { position: relative; padding-left: 2.5rem; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: 8px; top: 8px; bottom: -24px;
+      width: 2px; background: linear-gradient(to bottom, #FF6200, transparent);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      position: absolute; left: 0; top: 6px;
+      width: 18px; height: 18px;
+      background: linear-gradient(135deg, #FF6200, #F5A623);
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(255,98,0,0.2);
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 640px) {
+      .orb { display: none; }
+      #hero h1 { font-size: 2.5rem !important; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-white">
+
+<!-- ====================== NAVBAR ====================== -->
+<nav id="navbar" class="w-full">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="#hero" class="flex items-center gap-3 z-10">
+      <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-brand-orange to-brand-gold flex items-center justify-content-center shadow-lg" style="display:flex;align-items:center;justify-content:center;">
+        <i class="fa-solid fa-building text-white text-lg"></i>
+      </div>
+      <div>
+        <div class="text-white font-display font-700 text-lg leading-tight" style="font-weight:700;">Dilawari</div>
+        <div class="text-brand-gold text-xs font-semibold tracking-widest uppercase" style="font-size:0.65rem;">Properties</div>
+      </div>
+    </a>
+
+    <!-- Desktop Nav -->
+    <div class="hidden lg:flex items-center gap-7">
+      <a href="#services"     class="nav-link">Services</a>
+      <a href="#properties"   class="nav-link">Properties</a>
+      <a href="#gallery"      class="nav-link">Gallery</a>
+      <a href="#testimonials" class="nav-link">Reviews</a>
+      <a href="#about"        class="nav-link">About</a>
+      <a href="#contact"      class="nav-link">Contact</a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="tel:+919810253238" class="flex items-center gap-2 text-white text-sm font-semibold bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all border border-white/20">
+        <i class="fa-solid fa-phone text-brand-orange"></i> +91 98102 53238
+      </a>
+      <a href="https://wa.me/919810253238" target="_blank" class="btn-primary text-sm py-2 px-4">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="menu-toggle" class="lg:hidden text-white text-2xl z-10 focus:outline-none" aria-label="Menu">
+      <i class="fa-solid fa-bars" id="menu-icon"></i>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-modal="true">
+  <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl"><i class="fa-solid fa-xmark"></i></button>
+  <a href="#hero"         class="mobile-nav-link" onclick="closeMobileMenu()">Home</a>
+  <a href="#services"     class="mobile-nav-link" onclick="closeMobileMenu()">Services</a>
+  <a href="#properties"   class="mobile-nav-link" onclick="closeMobileMenu()">Properties</a>
+  <a href="#gallery"      class="mobile-nav-link" onclick="closeMobileMenu()">Gallery</a>
+  <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#about"        class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+  <a href="#contact"      class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
+  <div class="flex gap-4 mt-4">
+    <a href="tel:+919810253238" class="btn-outline text-base"><i class="fa-solid fa-phone"></i> Call</a>
+    <a href="https://wa.me/919810253238" target="_blank" class="btn-primary text-base"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  </div>
+</div>
+
+
+<!-- ====================== HERO ====================== -->
+<section id="hero" class="relative flex items-center justify-center text-white">
+  <!-- Orbs -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <!-- Particles -->
+  <div id="particles-container"></div>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-4 text-center py-32 pt-36">
+    <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 backdrop-blur-sm text-white/90 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-8"
+         data-aos="fade-down" data-aos-delay="100">
+      <span class="w-2 h-2 rounded-full bg-brand-orange animate-pulse"></span>
+      दिलावरी प्रॉपर्टीज़ &nbsp;·&nbsp; Est. 1998 · Paharganj, Delhi
+    </div>
+
+    <h1 class="font-display font-extrabold leading-tight mb-6"
+        style="font-size: clamp(2.8rem, 6vw, 5rem);"
+        data-aos="fade-up" data-aos-delay="200">
+      Find Your <span class="shimmer-text">Dream Property</span><br/>in the Heart of Delhi
+    </h1>
+
+    <p class="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-4 leading-relaxed"
+       data-aos="fade-up" data-aos-delay="350">
+      Your Trusted Property Partner in Paharganj, Delhi — 25+ years of serving families and businesses across Paharganj, Karol Bagh, Connaught Place &amp; NDMC.
+    </p>
+    <p class="text-sm text-white/50 mb-10" data-aos="fade-up" data-aos-delay="420">
+      <i class="fa-solid fa-location-dot text-brand-orange mr-1"></i> आपका भरोसेमंद प्रॉपर्टी पार्टनर
+    </p>
+
+    <div class="flex flex-wrap gap-4 justify-center" data-aos="fade-up" data-aos-delay="500">
+      <a href="#properties" class="btn-primary text-base px-8 py-4">
+        <i class="fa-solid fa-search"></i> Explore Properties
+      </a>
+      <a href="#contact" class="btn-outline text-base px-8 py-4">
+        <i class="fa-solid fa-headset"></i> Free Consultation
+      </a>
+      <a href="https://wa.me/919810253238?text=Hello%20Dilawari%20Properties%2C%20I%20am%20interested%20in%20a%20property." target="_blank" class="btn-primary text-base px-8 py-4" style="background:linear-gradient(135deg,#25D366,#128C7E);">
+        <i class="fab fa-whatsapp"></i> WhatsApp Now
+      </a>
+    </div>
+
+    <!-- Quick Stats Strip -->
+    <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
+         data-aos="fade-up" data-aos-delay="650">
+      <div class="glass-card py-4 px-3 text-center">
+        <div class="text-2xl font-display font-bold text-brand-orange">500+</div>
+        <div class="text-white/70 text-xs mt-1">Happy Clients</div>
+      </div>
+      <div class="glass-card py-4 px-3 text-center">
+        <div class="text-2xl font-display font-bold text-brand-orange">25+</div>
+        <div class="text-white/70 text-xs mt-1">Years Experience</div>
+      </div>
+      <div class="glass-card py-4 px-3 text-center">
+        <div class="text-2xl font-display font-bold text-brand-orange">1000+</div>
+        <div class="text-white/70 text-xs mt-1">Deals Closed</div>
+      </div>
+      <div class="glass-card py-4 px-3 text-center">
+        <div class="text-2xl font-display font-bold text-brand-orange">5★</div>
+        <div class="text-white/70 text-xs mt-1">Rated Dealer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll cue -->
+  <a href="#services" class="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/60 flex flex-col items-center gap-2 text-xs hover:text-brand-orange transition-colors">
+    <span>Scroll Down</span>
+    <i class="fa-solid fa-chevron-down animate-bounce"></i>
+  </a>
+</section>
+
+<!-- Wave Divider -->
+<div class="wave-divider bg-brand-light" style="margin-top:-2px;">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,0 C360,60 1080,60 1440,0 L1440,60 L0,60 Z" fill="#0A2540"/>
+  </svg>
+</div>
+
+
+<!-- ====================== SERVICES ====================== -->
+<section id="services" class="py-24 bg-brand-light">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center mb-4">What We Offer</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-4">
+        Our <span class="gradient-text">Expert Services</span>
+      </h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">
+        From buying your first home to leasing commercial space — we guide you at every step with honesty, expertise, and care.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Card 1 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon"><i class="fa-solid fa-house-chimney"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Residential Sales</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Find the perfect home for your family. Flats, floors, and independent houses across Paharganj, Karol Bagh & beyond.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 2 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-icon"><i class="fa-solid fa-store"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Commercial Leasing</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Premium office spaces, shops, showrooms, and commercial plots near Connaught Place &amp; NDMC corridors.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 3 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-icon"><i class="fa-solid fa-key"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Property Rental</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Hassle-free rentals for families, students, and professionals. Short-term and long-term options available.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 4 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="240">
+        <div class="service-icon"><i class="fa-solid fa-handshake"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Property Management</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Complete end-to-end property management — tenant sourcing, rent collection, maintenance coordination, and more.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 5 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="320">
+        <div class="service-icon"><i class="fa-solid fa-file-contract"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Legal &amp; Documentation</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Registry, stamp duty, NOC, lease agreements — we assist with all documentation for a smooth, worry-free transaction.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <!-- Card 6 -->
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3 class="font-display font-bold text-xl text-brand-navy mb-2">Investment Advisory</h3>
+        <p class="text-slate-500 text-sm leading-relaxed">Smart insights on high-yield localities, upcoming micro-markets, and ROI-driven investment strategies in Delhi.</p>
+        <a href="#contact" class="mt-4 inline-flex items-center gap-1 text-brand-orange text-sm font-semibold hover:gap-3 transition-all">Enquire Now <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Angled Divider -->
+<div class="h-16 bg-brand-navy" style="clip-path:polygon(0 0,100% 100%,100% 100%,0 100%); margin-top:-1px;"></div>
+
+
+<!-- ====================== WHY US / STATS ====================== -->
+<section id="why-us" class="py-24 bg-brand-navy relative overflow-hidden">
+  <!-- Decorative grid -->
+  <div class="absolute inset-0 opacity-5" style="background-image: linear-gradient(rgba(255,98,0,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(255,98,0,0.4) 1px, transparent 1px); background-size: 60px 60px;"></div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center text-brand-orange mb-4" style="color:#FF6200;">Why Choose Us</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+        Trust Built Over <span class="gradient-text">25 Years</span>
+      </h2>
+      <p class="text-white/60 text-lg max-w-2xl mx-auto">
+        In Paharganj and across Delhi, thousands of families and businesses have trusted Dilawari Properties. Here's why.
+      </p>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-20">
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="0">
+        <div class="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-2">
+          <span class="counter" data-target="500">0</span>+
+        </div>
+        <div class="text-white/50 text-sm uppercase tracking-wider font-semibold">Happy Clients</div>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-2">
+          <span class="counter" data-target="25">0</span>+
+        </div>
+        <div class="text-white/50 text-sm uppercase tracking-wider font-semibold">Years Active</div>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-2">
+          <span class="counter" data-target="1000">0</span>+
+        </div>
+        <div class="text-white/50 text-sm uppercase tracking-wider font-semibold">Deals Closed</div>
+      </div>
+      <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-4xl md:text-5xl font-display font-extrabold gradient-text mb-2">
+          <span class="counter" data-target="5">0</span>★
+        </div>
+        <div class="text-white/50 text-sm uppercase tracking-wider font-semibold">Avg. Rating</div>
+      </div>
+    </div>
+
+    <!-- Reasons Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="0">
+        <i class="fa-solid fa-shield-halved text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">100% Transparent Dealing</h4>
+        <p class="text-white/55 text-sm leading-relaxed">No hidden charges, no false promises. Every deal is conducted with complete transparency and documented properly.</p>
+      </div>
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="100">
+        <i class="fa-solid fa-map-location-dot text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">Deep Local Knowledge</h4>
+        <p class="text-white/55 text-sm leading-relaxed">25+ years rooted in Paharganj means we know every lane, every rate, and every opportunity before it hits the market.</p>
+      </div>
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="200">
+        <i class="fa-solid fa-clock text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">Quick Closure</h4>
+        <p class="text-white/55 text-sm leading-relaxed">We respect your time. Our streamlined process and vast network ensure fast, efficient deal closures.</p>
+      </div>
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-user-tie text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">Expert Negotiation</h4>
+        <p class="text-white/55 text-sm leading-relaxed">We negotiate on your behalf to ensure you get the best possible price — buying, selling, or renting.</p>
+      </div>
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="400">
+        <i class="fa-solid fa-network-wired text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">Vast Network</h4>
+        <p class="text-white/55 text-sm leading-relaxed">Strong relationships with builders, developers, landlords, and authorities across Delhi give us unmatched access.</p>
+      </div>
+      <div class="glass-card p-6" data-aos="fade-up" data-aos-delay="500">
+        <i class="fa-solid fa-headset text-3xl text-brand-orange mb-4 block"></i>
+        <h4 class="font-display font-bold text-lg text-white mb-2">After-Sale Support</h4>
+        <p class="text-white/55 text-sm leading-relaxed">Our relationship doesn't end at the deal. We're always a call away for post-purchase support and guidance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider bg-white" style="margin-top:-2px;">
+  <svg viewBox="0 0 1440 70" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,70 C480,0 960,0 1440,70 L1440,70 L0,70 Z" fill="#0A2540"/>
+  </svg>
+</div>
+
+
+<!-- ====================== FEATURED PROPERTIES ====================== -->
+<section id="properties" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center mb-4">Hot Listings</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-4">
+        Featured <span class="gradient-text">Properties</span>
+      </h2>
+      <p class="text-slate-500 text-lg max-w-2xl mx-auto">
+        Hand-picked properties across Paharganj, Karol Bagh, and Connaught Place — residential and commercial.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Property 1 -->
+      <div class="property-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="property-img-wrap">
+          <img src="https://images.unsplash.com/photo-1626178793926-22b28830aa30?w=600&q=80" alt="3 BHK Flat Paharganj" loading="lazy" />
+          <div class="property-badge">For Sale</div>
+          <div class="property-overlay">
+            <a href="#contact" class="btn-primary text-sm py-2 px-5"><i class="fa-solid fa-paper-plane"></i> Inquiry Now</a>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-1">3 BHK Premium Flat</h3>
+          <p class="text-brand-orange text-sm font-semibold mb-3"><i class="fa-solid fa-location-dot mr-1"></i>Chuna Mandi, Paharganj</p>
+          <div class="flex items-center gap-4 text-slate-500 text-sm mb-4">
+            <span><i class="fa-solid fa-bed mr-1 text-brand-orange"></i>3 Beds</span>
+            <span><i class="fa-solid fa-bath mr-1 text-brand-orange"></i>2 Baths</span>
+            <span><i class="fa-solid fa-ruler-combined mr-1 text-brand-orange"></i>1200 sq.ft</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-display font-bold text-brand-navy">₹85 Lakh</span>
+            <a href="#contact" class="btn-primary text-xs py-2 px-4">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 2 -->
+      <div class="property-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="property-img-wrap">
+          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80" alt="Commercial Office Connaught Place" loading="lazy" />
+          <div class="property-badge" style="background:linear-gradient(135deg,#0A2540,#163d66);">For Rent</div>
+          <div class="property-overlay">
+            <a href="#contact" class="btn-primary text-sm py-2 px-5"><i class="fa-solid fa-paper-plane"></i> Inquiry Now</a>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-1">Commercial Office Space</h3>
+          <p class="text-brand-orange text-sm font-semibold mb-3"><i class="fa-solid fa-location-dot mr-1"></i>Connaught Place, Delhi</p>
+          <div class="flex items-center gap-4 text-slate-500 text-sm mb-4">
+            <span><i class="fa-solid fa-layer-group mr-1 text-brand-orange"></i>2nd Floor</span>
+            <span><i class="fa-solid fa-wifi mr-1 text-brand-orange"></i>Fibre Ready</span>
+            <span><i class="fa-solid fa-ruler-combined mr-1 text-brand-orange"></i>800 sq.ft</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-display font-bold text-brand-navy">₹45K/mo</span>
+            <a href="#contact" class="btn-primary text-xs py-2 px-4">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 3 -->
+      <div class="property-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="property-img-wrap">
+          <img src="https://images.unsplash.com/photo-1585412727339-54e4bae3bbf9?w=600&q=80" alt="2 BHK Karol Bagh" loading="lazy" />
+          <div class="property-badge">For Sale</div>
+          <div class="property-overlay">
+            <a href="#contact" class="btn-primary text-sm py-2 px-5"><i class="fa-solid fa-paper-plane"></i> Inquiry Now</a>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-1">2 BHK Renovated Flat</h3>
+          <p class="text-brand-orange text-sm font-semibold mb-3"><i class="fa-solid fa-location-dot mr-1"></i>Karol Bagh, Delhi</p>
+          <div class="flex items-center gap-4 text-slate-500 text-sm mb-4">
+            <span><i class="fa-solid fa-bed mr-1 text-brand-orange"></i>2 Beds</span>
+            <span><i class="fa-solid fa-bath mr-1 text-brand-orange"></i>2 Baths</span>
+            <span><i class="fa-solid fa-ruler-combined mr-1 text-brand-orange"></i>950 sq.ft</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-display font-bold text-brand-navy">₹68 Lakh</span>
+            <a href="#contact" class="btn-primary text-xs py-2 px-4">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 4 -->
+      <div class="property-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="property-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600&q=80" alt="Shop Paharganj" loading="lazy" />
+          <div class="property-badge" style="background:linear-gradient(135deg,#F5A623,#e58e00);">Hot Deal</div>
+          <div class="property-overlay">
+            <a href="#contact" class="btn-primary text-sm py-2 px-5"><i class="fa-solid fa-paper-plane"></i> Inquiry Now</a>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-1">Prime Retail Shop</h3>
+          <p class="text-brand-orange text-sm font-semibold mb-3"><i class="fa-solid fa-location-dot mr-1"></i>Main Bazar, Paharganj</p>
+          <div class="flex items-center gap-4 text-slate-500 text-sm mb-4">
+            <span><i class="fa-solid fa-store mr-1 text-brand-orange"></i>Ground Floor</span>
+            <span><i class="fa-solid fa-people-group mr-1 text-brand-orange"></i>High Footfall</span>
+            <span><i class="fa-solid fa-ruler-combined mr-1 text-brand-orange"></i>300 sq.ft</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-display font-bold text-brand-navy">₹1.2 Cr</span>
+            <a href="#contact" class="btn-primary text-xs py-2 px-4">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 5 -->
+      <div class="property-card" data-aos="fade-up" data-aos-delay="400">
+        <div class="property-img-wrap">
+          <img src="https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=600&q=80" alt="1 BHK Studio Paharganj" loading="lazy" />
+          <div class="property-badge" style="background:linear-gradient(135deg,#0A2540,#163d66);">For Rent</div>
+          <div class="property-overlay">
+            <a href="#contact" class="btn-primary text-sm py-2 px-5"><i class="fa-solid fa-paper-plane"></i> Inquiry Now</a>
+          </div>
+        </div>
+        <div class="p-5">
+          <h3 class="font-display font-bold text-xl text-brand-navy mb-1">Studio Apartment</h3>
+          <p class="text-brand-orange text-sm font-semibold mb-3"><i class="fa-solid fa-location-dot mr-1"></i>NDMC Area, Delhi</p>
+          <div class="flex items-center gap-4 text-slate-500 text-sm mb-4">
+            <span><i class="fa-solid fa-bed mr-1 text-brand-orange"></i>1 Bed</span>
+            <span><i class="fa-solid fa-bath mr-1 text-brand-orange"></i>1 Bath</span>
+            <span><i class="fa-solid fa-ruler-combined mr-1 text-brand-orange"></i>450 sq.ft</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-2xl font-display font-bold text-brand-navy">₹18K/mo</span>
+            <a href="#contact" class="btn-primary text-xs py-2 px-4">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Property 6 – CTA card -->
+      <div class="property-card flex items-center justify-center bg-gradient-to-br from-brand-navy to-slate-800 min-h-[340px]" data-aos="fade-up" data-aos-delay="500">
+        <div class="text-center p-6">
+          <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-4">
+            <i class="fa-solid fa-magnifying-glass-plus text-brand-orange text-2xl"></i>
+          </div>
+          <h3 class="font-display font-bold text-2xl text-white mb-3">More Properties</h3>
+          <p class="text-white/60 text-sm mb-6">We have 100+ unlisted properties across Delhi. Call us or WhatsApp for exclusive listings.</p>
+          <a href="https://wa.me/919810253238?text=I%20want%20to%20see%20more%20property%20listings." target="_blank" class="btn-primary text-sm">
+            <i class="fab fa-whatsapp"></i> Ask for More
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== GALLERY ====================== -->
+<section id="gallery" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <div class="section-eyebrow justify-center mb-4">Visual Tour</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-4">
+        Our <span class="gradient-text">Gallery</span>
+      </h2>
+      <p class="text-slate-500 text-lg max-w-xl mx-auto">
+        A glimpse into the properties, offices, and localities we work in.
+      </p>
+    </div>
+
+    <!-- Filter Tabs -->
+    <div class="flex flex-wrap gap-3 justify-center mb-10" data-aos="fade-up" data-aos-delay="100">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="office">Offices</button>
+      <button class="filter-btn" data-filter="property">Properties</button>
+      <button class="filter-btn" data-filter="locality">Locality</button>
+    </div>
+
+    <!-- Masonry Grid -->
+    <div class="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4" id="gallery-grid" data-aos="fade-up" data-aos-delay="200">
+      <div class="gallery-item break-inside-avoid" data-category="property" style="height:220px;">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80" alt="Property 1" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="office" style="height:300px;">
+        <img src="https://images.unsplash.com/photo-1497366754035-f200586c52f7?w=600&q=80" alt="Office Space" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="locality" style="height:180px;">
+        <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=600&q=80" alt="Delhi locality" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="property" style="height:260px;">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Flat interior" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="office" style="height:200px;">
+        <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=600&q=80" alt="Modern office" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="locality" style="height:280px;">
+        <img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=600&q=80" alt="Delhi cityscape" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="property" style="height:200px;">
+        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80" alt="Premium home" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+      <div class="gallery-item break-inside-avoid" data-category="office" style="height:240px;">
+        <img src="https://images.unsplash.com/photo-1554774853-719586f82d77?w=600&q=80" alt="Commercial space" class="w-full h-full" loading="lazy" />
+        <div class="gallery-overlay"><i class="fa-solid fa-expand text-white text-2xl"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <button id="lightbox-close" aria-label="Close lightbox"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightbox-img" src="" alt="Gallery image" />
+</div>
+
+
+<!-- ====================== TESTIMONIALS ====================== -->
+<section id="testimonials" class="py-24 bg-white overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center mb-4">Client Stories</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-4">
+        What Our Clients <span class="gradient-text">Say</span>
+      </h2>
+    </div>
+
+    <div class="relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+      <div class="testimonial-track" id="testimonial-track">
+        <!-- Slide 1 -->
+        <div class="testimonial-slide px-2">
+          <div class="quote-card max-w-2xl mx-auto">
+            <div class="flex items-center gap-4 mb-5">
+              <img src="https://i.pravatar.cc/72?img=11" alt="Rajesh Kumar" class="w-16 h-16 rounded-full object-cover border-4 border-brand-orange/30" loading="lazy"/>
+              <div>
+                <h4 class="font-display font-bold text-lg text-brand-navy">Rajesh Kumar</h4>
+                <p class="text-brand-orange text-sm font-semibold">Home Buyer · Paharganj</p>
+                <div class="flex gap-1 mt-1">
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed italic relative z-10">
+              "Dilawari Properties helped me find the perfect 3 BHK flat in Chuna Mandi within a week. Mr. Dilawari's honesty and deep knowledge of Paharganj is unmatched. The documentation was smooth and hassle-free. Highly recommend to anyone looking for property in this area!"
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="testimonial-slide px-2">
+          <div class="quote-card max-w-2xl mx-auto">
+            <div class="flex items-center gap-4 mb-5">
+              <img src="https://i.pravatar.cc/72?img=32" alt="Sunita Sharma" class="w-16 h-16 rounded-full object-cover border-4 border-brand-orange/30" loading="lazy"/>
+              <div>
+                <h4 class="font-display font-bold text-lg text-brand-navy">Sunita Sharma</h4>
+                <p class="text-brand-orange text-sm font-semibold">Business Owner · Karol Bagh</p>
+                <div class="flex gap-1 mt-1">
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed italic relative z-10">
+              "We were looking for a commercial space near Connaught Place for our new office. Dilawari Properties found us the ideal location within budget and handled all paperwork efficiently. A true professional team with excellent local connections. इनपर पूरा भरोसा है!"
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="testimonial-slide px-2">
+          <div class="quote-card max-w-2xl mx-auto">
+            <div class="flex items-center gap-4 mb-5">
+              <img src="https://i.pravatar.cc/72?img=53" alt="Amir Khan" class="w-16 h-16 rounded-full object-cover border-4 border-brand-orange/30" loading="lazy"/>
+              <div>
+                <h4 class="font-display font-bold text-lg text-brand-navy">Amir Khan</h4>
+                <p class="text-brand-orange text-sm font-semibold">Investor · Delhi NCR</p>
+                <div class="flex gap-1 mt-1">
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed italic relative z-10">
+              "I've done three property investments through Dilawari Properties over the past 7 years, and every single deal has been profitable. Their market knowledge, transparent pricing, and aftercare service keep me coming back. They're the gold standard for Delhi property."
+            </p>
+          </div>
+        </div>
+        <!-- Slide 4 -->
+        <div class="testimonial-slide px-2">
+          <div class="quote-card max-w-2xl mx-auto">
+            <div class="flex items-center gap-4 mb-5">
+              <img src="https://i.pravatar.cc/72?img=47" alt="Priya Mehra" class="w-16 h-16 rounded-full object-cover border-4 border-brand-orange/30" loading="lazy"/>
+              <div>
+                <h4 class="font-display font-bold text-lg text-brand-navy">Priya Mehra</h4>
+                <p class="text-brand-orange text-sm font-semibold">Tenant · Paharganj</p>
+                <div class="flex gap-1 mt-1">
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                  <i class="fa-solid fa-star text-brand-gold text-xs"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-slate-600 leading-relaxed italic relative z-10">
+              "Finding a good rental in Paharganj as a single woman felt daunting, but Dilawari Properties made it completely safe and easy. They were professional, respectful, and found me a wonderful flat in a secure building. I'm so grateful for their help!"
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nav Dots -->
+      <div class="flex justify-center gap-2 mt-8" id="testimonial-dots">
+        <button class="w-3 h-3 rounded-full bg-brand-orange transition-all dot-btn" data-index="0"></button>
+        <button class="w-3 h-3 rounded-full bg-slate-300 transition-all dot-btn" data-index="1"></button>
+        <button class="w-3 h-3 rounded-full bg-slate-300 transition-all dot-btn" data-index="2"></button>
+        <button class="w-3 h-3 rounded-full bg-slate-300 transition-all dot-btn" data-index="3"></button>
+      </div>
+
+      <!-- Prev/Next -->
+      <button id="prev-btn" class="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-navy hover:bg-brand-orange hover:text-white transition-all -translate-x-1/2">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button id="next-btn" class="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white shadow-lg flex items-center justify-center text-brand-navy hover:bg-brand-orange hover:text-white transition-all translate-x-1/2">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Online review platform links -->
+    <div class="flex flex-wrap justify-center gap-4 mt-12" data-aos="fade-up" data-aos-delay="200">
+      <a href="https://www.justdial.com" target="_blank" rel="noopener" class="flex items-center gap-2 border-2 border-slate-200 px-5 py-3 rounded-full text-sm font-semibold text-slate-600 hover:border-brand-orange hover:text-brand-orange transition-all">
+        <i class="fa-solid fa-star text-brand-orange"></i> Rate on Justdial
+      </a>
+      <a href="https://www.sulekha.com" target="_blank" rel="noopener" class="flex items-center gap-2 border-2 border-slate-200 px-5 py-3 rounded-full text-sm font-semibold text-slate-600 hover:border-brand-orange hover:text-brand-orange transition-all">
+        <i class="fa-solid fa-thumbs-up text-brand-orange"></i> Review on Sulekha
+      </a>
+      <a href="https://www.indiamart.com" target="_blank" rel="noopener" class="flex items-center gap-2 border-2 border-slate-200 px-5 py-3 rounded-full text-sm font-semibold text-slate-600 hover:border-brand-orange hover:text-brand-orange transition-all">
+        <i class="fa-solid fa-building-columns text-brand-orange"></i> IndiaMART
+      </a>
+      <a href="https://g.co/kgs/example" target="_blank" rel="noopener" class="flex items-center gap-2 border-2 border-slate-200 px-5 py-3 rounded-full text-sm font-semibold text-slate-600 hover:border-brand-orange hover:text-brand-orange transition-all">
+        <i class="fab fa-google text-brand-orange"></i> Google Reviews
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== ABOUT US ====================== -->
+<section id="about" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Image -->
+      <div class="relative" data-aos="fade-right">
+        <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3]">
+          <img src="https://images.unsplash.com/photo-1560520653-9e0e4c89eb11?w=800&q=85" alt="Dilawari Properties Office Paharganj" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <!-- Floating stat card -->
+        <div class="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-5 text-center min-w-[140px]">
+          <div class="text-3xl font-display font-extrabold gradient-text">25+</div>
+          <div class="text-slate-500 text-xs mt-1 font-semibold uppercase tracking-wider">Years of Trust</div>
+        </div>
+        <!-- Floating badge -->
+        <div class="absolute -top-4 -left-4 bg-brand-orange rounded-xl px-4 py-2 shadow-lg">
+          <span class="text-white text-xs font-bold uppercase tracking-wider">Est. 1998</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div data-aos="fade-left">
+        <div class="section-eyebrow mb-4">Our Story</div>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-6">
+          25 Years of <span class="gradient-text">Serving Delhi</span> with Integrity
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          Founded in 1998 by Mr. Dilawari in the heart of Paharganj, Dilawari Properties was built on one simple principle: 
+          <strong class="text-brand-navy">honest dealings, happy clients.</strong> Over two and a half decades, we've grown from a small local office into one of Delhi's most respected property consultancies.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-8">
+          हम पहाड़गंज और दिल्ली के आसपास के इलाकों में आपकी प्रॉपर्टी की जरूरतों को पूरी ईमानदारी और तजुर्बे के साथ पूरा करते हैं।
+        </p>
+
+        <!-- Timeline -->
+        <div class="space-y-6 mb-8">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h5 class="font-bold text-brand-navy">1998 – Founded</h5>
+              <p class="text-slate-500 text-sm">Started with residential rentals in Chuna Mandi, Paharganj.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h5 class="font-bold text-brand-navy">2005 – Commercial Expansion</h5>
+              <p class="text-slate-500 text-sm">Extended services to Karol Bagh and Connaught Place commercial segments.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h5 class="font-bold text-brand-navy">2015 – 500 Client Milestone</h5>
+              <p class="text-slate-500 text-sm">Closed our 500th successful property deal — a milestone we celebrated with our loyal clients.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <h5 class="font-bold text-brand-navy">2024 – Digital Presence</h5>
+              <p class="text-slate-500 text-sm">Expanded online to serve NRI and out-of-city clients looking for Delhi property investment.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary text-base px-8 py-4">
+          <i class="fa-solid fa-phone-volume"></i> Talk to Us Today
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== CONTACT ====================== -->
+<section id="contact" class="py-24 bg-brand-navy relative overflow-hidden">
+  <!-- Decorative -->
+  <div class="absolute inset-0 opacity-5" style="background-image: radial-gradient(circle at 20% 50%, rgba(255,98,0,0.6) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(245,166,35,0.4) 0%, transparent 40%);"></div>
+
+  <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center text-brand-orange mb-4">Get In Touch</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-white mb-4">
+        Let's Find Your <span class="gradient-text">Perfect Property</span>
+      </h2>
+      <p class="text-white/60 text-lg max-w-xl mx-auto">
+        Drop us a message, call us, or WhatsApp — we respond within hours.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Contact Info -->
+      <div class="space-y-5" data-aos="fade-right">
+        <div class="glass-card p-5 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-location-dot text-white text-lg"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-white mb-1">Our Office</h5>
+            <p class="text-white/60 text-sm leading-relaxed">2627, Street No 9, Opposite Saya Hotel,<br/>Chuna Mandi, Paharganj, Delhi – 110055</p>
+          </div>
+        </div>
+        <div class="glass-card p-5 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-phone text-white text-lg"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-white mb-1">Phone / WhatsApp</h5>
+            <a href="tel:+919810253238" class="text-white/80 text-sm hover:text-brand-orange transition-colors">+91 98102 53238</a>
+          </div>
+        </div>
+        <div class="glass-card p-5 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-envelope text-white text-lg"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-white mb-1">Email</h5>
+            <a href="mailto:dilawari9810253238@gmail.com" class="text-white/80 text-sm hover:text-brand-orange transition-colors break-all">dilawari9810253238@gmail.com</a>
+          </div>
+        </div>
+        <div class="glass-card p-5 flex items-start gap-4">
+          <div class="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center flex-shrink-0">
+            <i class="fa-solid fa-clock text-white text-lg"></i>
+          </div>
+          <div>
+            <h5 class="font-bold text-white mb-1">Office Hours</h5>
+            <p class="text-white/60 text-sm">Mon – Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 4:00 PM</p>
+          </div>
+        </div>
+        <!-- Platforms -->
+        <div class="glass-card p-5">
+          <h5 class="font-bold text-white mb-3 text-sm uppercase tracking-wider">Find Us On</h5>
+          <div class="flex gap-3 flex-wrap">
+            <a href="https://www.justdial.com" target="_blank" rel="noopener" class="bg-white/10 hover:bg-brand-orange text-white text-xs font-bold px-3 py-2 rounded-lg transition-all">Justdial</a>
+            <a href="https://www.sulekha.com" target="_blank" rel="noopener" class="bg-white/10 hover:bg-brand-orange text-white text-xs font-bold px-3 py-2 rounded-lg transition-all">Sulekha</a>
+            <a href="https://www.indiamart.com" target="_blank" rel="noopener" class="bg-white/10 hover:bg-brand-orange text-white text-xs font-bold px-3 py-2 rounded-lg transition-all">IndiaMART</a>
+            <a href="https://wa.me/919810253238" target="_blank" rel="noopener" class="bg-green-600 hover:bg-green-500 text-white text-xs font-bold px-3 py-2 rounded-lg transition-all"><i class="fab fa-whatsapp mr-1"></i>WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="lg:col-span-2 glass-card p-8" data-aos="fade-left">
+        <h3 class="font-display font-bold text-2xl text-white mb-6">Send Us a Message</h3>
+        <form id="contact-form" novalidate>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+            <div>
+              <label class="text-white/70 text-sm font-semibold mb-2 block">Full Name *</label>
+              <input type="text" id="f-name" class="form-input" placeholder="Your full name" required />
+              <p class="text-red-400 text-xs mt-1 hidden" id="err-name">Please enter your name.</p>
+            </div>
+            <div>
+              <label class="text-white/70 text-sm font-semibold mb-2 block">Phone Number *</label>
+              <input type="tel" id="f-phone" class="form-input" placeholder="+91 XXXXX XXXXX" required />
+              <p class="text-red-400 text-xs mt-1 hidden" id="err-phone">Please enter a valid phone number.</p>
+            </div>
+          </div>
+          <div class="mb-5">
+            <label class="text-white/70 text-sm font-semibold mb-2 block">Email Address</label>
+            <input type="email" id="f-email" class="form-input" placeholder="your@email.com" />
+          </div>
+          <div class="mb-5">
+            <label class="text-white/70 text-sm font-semibold mb-2 block">Property Requirement *</label>
+            <select id="f-type" class="form-input" required>
+              <option value="">Select requirement...</option>
+              <option>Buy a Residential Property</option>
+              <option>Rent a Residential Property</option>
+              <option>Buy Commercial Property</option>
+              <option>Rent / Lease Commercial Property</option>
+              <option>Property Investment Advice</option>
+              <option>Property Management</option>
+              <option>Other</option>
+            </select>
+            <p class="text-red-400 text-xs mt-1 hidden" id="err-type">Please select a requirement.</p>
+          </div>
+          <div class="mb-5">
+            <label class="text-white/70 text-sm font-semibold mb-2 block">Budget / Location Preference</label>
+            <input type="text" id="f-budget" class="form-input" placeholder="e.g. ₹50L–₹80L, Paharganj or Karol Bagh" />
+          </div>
+          <div class="mb-6">
+            <label class="text-white/70 text-sm font-semibold mb-2 block">Message</label>
+            <textarea id="f-message" class="form-input" rows="4" placeholder="Tell us more about what you're looking for..."></textarea>
+          </div>
+
+          <!-- Success message -->
+          <div id="form-success" class="mb-5">
+            <i class="fa-solid fa-circle-check text-2xl mb-2 block"></i>
+            <strong>Thank you! We'll call you within a few hours.</strong><br/>
+            <span class="text-sm opacity-80">धन्यवाद! हम जल्द ही संपर्क करेंगे।</span>
+          </div>
+
+          <button type="submit" id="form-submit" class="btn-primary w-full justify-center text-base py-4">
+            <span id="submit-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+            <span id="submit-spinner" class="hidden"><span class="spinner"></span> Sending...</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="mt-10 rounded-3xl overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+      <iframe
+        title="Dilawari Properties Location – Chuna Mandi, Paharganj, Delhi"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7219540948804!2d77.20683931508247!3d28.644218382415967!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b9b6b1b1d%3A0x6c6ea81e7a929b64!2sChuna%20Mandi%2C%20Paharganj%2C%20New%20Delhi%2C%20Delhi%20110055!5e0!3m2!1sen!2sin!4v1627895231000!5m2!1sen!2sin"
+        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="bg-brand-dark text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+      <!-- Brand -->
+      <div>
+        <div class="flex items-center gap-3 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-orange to-brand-gold flex items-center justify-center">
+            <i class="fa-solid fa-building text-white text-xl"></i>
+          </div>
+          <div>
+            <div class="font-display font-bold text-xl">Dilawari</div>
+            <div class="text-brand-gold text-xs font-semibold tracking-widest uppercase">Properties</div>
+          </div>
+        </div>
+        <p class="text-white/50 text-sm leading-relaxed mb-5">
+          Your Trusted Property Partner in Paharganj, Delhi.<br/>आपका विश्वसनीय प्रॉपर्टी पार्टनर।
+        </p>
+        <div class="flex gap-3">
+          <a href="https://wa.me/919810253238" target="_blank" class="w-9 h-9 bg-white/10 hover:bg-green-600 rounded-full flex items-center justify-center text-sm transition-all"><i class="fab fa-whatsapp"></i></a>
+          <a href="mailto:dilawari9810253238@gmail.com" class="w-9 h-9 bg-white/10 hover:bg-brand-orange rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-envelope"></i></a>
+          <a href="tel:+919810253238" class="w-9 h-9 bg-white/10 hover:bg-brand-orange rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-phone"></i></a>
+          <a href="https://www.justdial.com" target="_blank" rel="noopener" class="w-9 h-9 bg-white/10 hover:bg-brand-orange rounded-full flex items-center justify-center text-sm transition-all"><i class="fa-solid fa-star"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest text-white/80 mb-5">Quick Links</h4>
+        <ul class="space-y-2">
+          <li><a href="#hero"         class="text-white/50 hover:text-brand-orange text-sm transition-colors">Home</a></li>
+          <li><a href="#services"     class="text-white/50 hover:text-brand-orange text-sm transition-colors">Services</a></li>
+          <li><a href="#properties"   class="text-white/50 hover:text-brand-orange text-sm transition-colors">Properties</a></li>
+          <li><a href="#gallery"      class="text-white/50 hover:text-brand-orange text-sm transition-colors">Gallery</a></li>
+          <li><a href="#testimonials" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Testimonials</a></li>
+          <li><a href="#about"        class="text-white/50 hover:text-brand-orange text-sm transition-colors">About Us</a></li>
+          <li><a href="#contact"      class="text-white/50 hover:text-brand-orange text-sm transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest text-white/80 mb-5">Our Services</h4>
+        <ul class="space-y-2">
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Residential Sales</a></li>
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Commercial Leasing</a></li>
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Property Rental</a></li>
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Property Management</a></li>
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Legal & Documentation</a></li>
+          <li><a href="#contact" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Investment Advisory</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="font-bold text-sm uppercase tracking-widest text-white/80 mb-5">Contact Info</h4>
+        <div class="space-y-4">
+          <div class="flex gap-3">
+            <i class="fa-solid fa-location-dot text-brand-orange mt-1 flex-shrink-0"></i>
+            <p class="text-white/50 text-sm">2627, Street No 9, Opposite Saya Hotel, Chuna Mandi, Paharganj, Delhi – 110055</p>
+          </div>
+          <div class="flex gap-3">
+            <i class="fa-solid fa-phone text-brand-orange mt-1 flex-shrink-0"></i>
+            <a href="tel:+919810253238" class="text-white/50 hover:text-brand-orange text-sm transition-colors">+91 98102 53238</a>
+          </div>
+          <div class="flex gap-3">
+            <i class="fa-solid fa-envelope text-brand-orange mt-1 flex-shrink-0"></i>
+            <a href="mailto:dilawari9810253238@gmail.com" class="text-white/50 hover:text-brand-orange text-sm transition-colors break-all">dilawari9810253238@gmail.com</a>
+          </div>
+        </div>
+        <!-- RERA / Trust badges placeholder -->
+        <div class="mt-5 flex gap-2 flex-wrap">
+          <span class="bg-white/10 text-white/60 text-xs px-3 py-1 rounded-full border border-white/10">Verified Dealer</span>
+          <span class="bg-white/10 text-white/60 text-xs px-3 py-1 rounded-full border border-white/10">25+ Yrs Trust</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Areas Served -->
+    <div class="border-t border-white/10 pt-8 pb-4 text-center" data-aos="fade-up">
+      <p class="text-white/30 text-xs mb-2 uppercase tracking-widest font-semibold">Areas Served</p>
+      <p class="text-white/50 text-sm flex flex-wrap justify-center gap-x-3 gap-y-1">
+        <span>Paharganj</span><span class="text-brand-orange/40">·</span>
+        <span>Karol Bagh</span><span class="text-brand-orange/40">·</span>
+        <span>Connaught Place</span><span class="text-brand-orange/40">·</span>
+        <span>NDMC</span><span class="text-brand-orange/40">·</span>
+        <span>Chuna Mandi</span><span class="text-brand-orange/40">·</span>
+        <span>Desh Bandhu Gupta Rd</span><span class="text-brand-orange/40">·</span>
+        <span>Ajmal Khan Rd</span><span class="text-brand-orange/40">·</span>
+        <span>Central Delhi</span>
+      </p>
+    </div>
+
+    <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <p class="text-white/30 text-xs">© 2024 Dilawari Properties. All rights reserved.</p>
+      <p class="text-white/30 text-xs">Designed with <i class="fa-solid fa-heart text-brand-orange"></i> for Paharganj, Delhi</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ====================== FLOATING BUTTONS ====================== -->
+<a href="https://wa.me/919810253238?text=Hi%20Dilawari%20Properties%2C%20I%20need%20help%20with%20a%20property." target="_blank" class="fab fab-whatsapp" aria-label="WhatsApp us" title="WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<a href="tel:+919810253238" class="fab fab-call" aria-label="Call us" title="Call Now">
+  <i class="fa-solid fa-phone"></i>
+</a>
+<button id="back-to-top" aria-label="Back to top" title="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+
+<!-- ====================== SCRIPTS ====================== -->
+<script>
+/* ── Init AOS ── */
+AOS.init({ duration: 700, once: true, easing: 'ease-out-cubic', offset: 60 });
+
+/* ── Navbar scroll shrink ── */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 60) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+  // Back to top
+  const btt = document.getElementById('back-to-top');
+  if (window.scrollY > 400) btt.classList.add('visible');
+  else btt.classList.remove('visible');
+});
+
+/* ── Back to top ── */
+document.getElementById('back-to-top').addEventListener('click', () =>
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+);
+
+/* ── Mobile Menu ── */
+function closeMobileMenu() {
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('menu-icon').className = 'fa-solid fa-bars';
+}
+document.getElementById('menu-toggle').addEventListener('click', () => {
+  const m = document.getElementById('mobile-menu');
+  m.classList.toggle('open');
+  document.getElementById('menu-icon').className = m.classList.contains('open')
+    ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+});
+document.getElementById('menu-close').addEventListener('click', closeMobileMenu);
+
+/* ── Animated Counters ── */
+function animateCounter(el) {
+  const target = +el.dataset.target;
+  const duration = 1800;
+  const step = target / (duration / 16);
+  let current = 0;
+  const timer = setInterval(() => {
+    current += step;
+    if (current >= target) { current = target; clearInterval(timer); }
+    el.textContent = target >= 100 ? Math.floor(current).toLocaleString() : Math.floor(current);
+  }, 16);
+}
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      animateCounter(e.target);
+      counterObserver.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+/* ── Particles ── */
+const pContainer = document.getElementById('particles-container');
+for (let i = 0; i < 18; i++) {
+  const p = document.createElement('div');
+  p.className = 'particle';
+  p.style.left  = Math.random() * 100 + 'vw';
+  p.style.bottom = '-10px';
+  p.style.animationDuration = (6 + Math.random() * 8) + 's';
+  p.style.animationDelay   = (Math.random() * 10) + 's';
+  p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+  pContainer.appendChild(p);
+}
+
+/* ── Parallax on hero ── */
+document.getElementById('hero').addEventListener('mousemove', (e) => {
+  const x = (e.clientX / window.innerWidth  - 0.5) * 20;
+  const y = (e.clientY / window.innerHeight - 0.5) * 12;
+  document.querySelectorAll('.orb').forEach(o => {
+    o.style.transform = `translate(${x * 0.5}px, ${y * 0.5}px)`;
+  });
+});
+
+/* ── Gallery Filter + Lightbox ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const show = filter === 'all' || item.dataset.category === filter;
+      item.style.transition = 'opacity 0.35s, transform 0.35s';
+      if (show) {
+        item.classList.remove('hidden');
+        item.style.opacity = '0'; item.style.transform = 'scale(0.92)';
+        setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 30);
+      } else {
+        item.style.opacity = '0';
+        setTimeout(() => item.classList.add('hidden'), 320);
+      }
+    });
+  });
+});
+
+const lightbox    = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+document.querySelectorAll('.gallery-item').forEach(item => {
+  item.addEventListener('click', () => {
+    lightboxImg.src = item.querySelector('img').src.replace('w=600', 'w=1200');
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+document.getElementById('lightbox-close').addEventListener('click', () => {
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+});
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+});
+
+/* ── Testimonial Carousel ── */
+let currentSlide = 0;
+const totalSlides = 4;
+let autoSlide = setInterval(nextSlide, 5000);
+
+function goToSlide(n) {
+  currentSlide = (n + totalSlides) % totalSlides;
+  document.getElementById('testimonial-track').style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.dot-btn').forEach((d, i) => {
+    d.style.background = i === currentSlide ? '#FF6200' : '#cbd5e1';
+    d.style.transform  = i === currentSlide ? 'scale(1.4)' : 'scale(1)';
+  });
+}
+function nextSlide() { goToSlide(currentSlide + 1); }
+function prevSlide() { goToSlide(currentSlide - 1); }
+
+document.getElementById('next-btn').addEventListener('click', () => { clearInterval(autoSlide); nextSlide(); autoSlide = setInterval(nextSlide, 5000); });
+document.getElementById('prev-btn').addEventListener('click', () => { clearInterval(autoSlide); prevSlide(); autoSlide = setInterval(nextSlide, 5000); });
+document.querySelectorAll('.dot-btn').forEach(d => {
+  d.addEventListener('click', () => { clearInterval(autoSlide); goToSlide(+d.dataset.index); autoSlide = setInterval(nextSlide, 5000); });
+});
+
+/* ── Contact Form ── */
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  let valid = true;
+
+  // Validate name
+  const name = document.getElementById('f-name');
+  const errName = document.getElementById('err-name');
+  if (!name.value.trim()) { errName.classList.remove('hidden'); valid = false; }
+  else errName.classList.add('hidden');
+
+  // Validate phone
+  const phone = document.getElementById('f-phone');
+  const errPhone = document.getElementById('err-phone');
+  if (!phone.value.trim() || !/^[\d\s+\-()]{7,}$/.test(phone.value)) { errPhone.classList.remove('hidden'); valid = false; }
+  else errPhone.classList.add('hidden');
+
+  // Validate type
+  const type = document.getElementById('f-type');
+  const errType = document.getElementById('err-type');
+  if (!type.value) { errType.classList.remove('hidden'); valid = false; }
+  else errType.classList.add('hidden');
+
+  if (!valid) return;
+
+  // Show loading
+  document.getElementById('submit-text').classList.add('hidden');
+  document.getElementById('submit-spinner').classList.remove('hidden');
+  document.getElementById('form-submit').disabled = true;
+
+  // Simulate async submit
+  setTimeout(() => {
+    document.getElementById('submit-text').classList.remove('hidden');
+    document.getElementById('submit-spinner').classList.add('hidden');
+    document.getElementById('form-submit').disabled = false;
+    document.getElementById('form-success').style.display = 'block';
+    this.reset();
+    setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 6000);
+  }, 1800);
+});
+</script>
+
+</body>
+</html>
