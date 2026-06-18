@@ -598,6 +598,34 @@
       backdrop-filter: blur(12px);
       border-radius: 20px;
     }
+    .glass-card-light {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 98, 0, 0.1);
+      border-radius: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .glass-card-light:hover {
+      background: rgba(255,255,255,0.8);
+      border-color: rgba(255, 98, 0, 0.2);
+    }
+    /* FAQ Accordion */
+    .faq-trigger {
+      cursor: pointer;
+    }
+    .faq-trigger i {
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-trigger i {
+      transform: rotate(180deg);
+    }
+    .faq-content {
+      transition: max-height 0.3s ease;
+    }
+    .faq-item.open .faq-content {
+      max-height: 500px;
+    }
     .angled-section {
       clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%);
     }
@@ -661,6 +689,8 @@
       <a href="#gallery"      class="nav-link">Gallery</a>
       <a href="#testimonials" class="nav-link">Reviews</a>
       <a href="#about"        class="nav-link">About</a>
+      <a href="#owner"        class="nav-link">Owner</a>
+      <a href="#faq"          class="nav-link">FAQ</a>
       <a href="#contact"      class="nav-link">Contact</a>
     </div>
 
@@ -690,6 +720,8 @@
   <a href="#gallery"      class="mobile-nav-link" onclick="closeMobileMenu()">Gallery</a>
   <a href="#testimonials" class="mobile-nav-link" onclick="closeMobileMenu()">Reviews</a>
   <a href="#about"        class="mobile-nav-link" onclick="closeMobileMenu()">About</a>
+  <a href="#owner"        class="mobile-nav-link" onclick="closeMobileMenu()">Owner</a>
+  <a href="#faq"          class="mobile-nav-link" onclick="closeMobileMenu()">FAQ</a>
   <a href="#contact"      class="mobile-nav-link" onclick="closeMobileMenu()">Contact</a>
   <div class="flex gap-4 mt-4">
     <a href="tel:+919810253238" class="btn-outline text-base"><i class="fa-solid fa-phone"></i> Call</a>
@@ -1355,7 +1387,7 @@
           <div class="timeline-item">
             <div class="timeline-dot"></div>
             <div>
-              <h5 class="font-bold text-brand-navy">2024 – Digital Presence</h5>
+              <h5 class="font-bold text-brand-navy">2026 – Digital Presence</h5>
               <p class="text-slate-500 text-sm">Expanded online to serve NRI and out-of-city clients looking for Delhi property investment.</p>
             </div>
           </div>
@@ -1365,6 +1397,176 @@
           <i class="fa-solid fa-phone-volume"></i> Talk to Us Today
         </a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== MEET THE OWNER ====================== -->
+<section id="owner" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <!-- Image -->
+      <div class="relative order-2 lg:order-1" data-aos="fade-left">
+        <div class="rounded-3xl overflow-hidden shadow-2xl aspect-square max-w-md mx-auto">
+          <img src="owner.jpg" alt="Gurmeet Singh Dilawri – Founder, Dilawri Properties" class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <!-- Badge -->
+        <div class="absolute -bottom-4 -right-4 bg-brand-orange rounded-2xl px-6 py-3 shadow-lg">
+          <span class="text-white font-bold text-sm">Founder & Director</span>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="order-1 lg:order-2" data-aos="fade-right">
+        <div class="section-eyebrow mb-4">The Face Behind Trust</div>
+        <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-6">
+          Meet <span class="gradient-text">Gurmeet Singh Dilawri</span>
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          With over a decade of experience in Delhi's real estate market, Gurmeet Singh Dilawri is the visionary founder of Dilawri Properties. His unwavering commitment to transparency, integrity, and client satisfaction has made him one of the most trusted names in Paharganj and Central Delhi.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-6">
+          गुरमीत सिंह दिलावरी दिल्ली की संपत्ति बाजार में एक विश्वसनीय नाम हैं। उनका लक्ष्य हमेशा ग्राहकों को सर्वोत्तम सेवा और ईमानदारी से व्यवहार प्रदान करना है।
+        </p>
+
+        <!-- Key Points -->
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-brand-orange font-bold"></i>
+            </div>
+            <div>
+              <h5 class="font-bold text-brand-navy">10+ Years Experience</h5>
+              <p class="text-slate-500 text-sm">Deep knowledge of Paharganj, Karol Bagh, CP, and surrounding neighborhoods.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-brand-orange font-bold"></i>
+            </div>
+            <div>
+              <h5 class="font-bold text-brand-navy">500+ Successful Deals</h5>
+              <p class="text-slate-500 text-sm">Trusted by hundreds of satisfied clients for residential and commercial properties.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 rounded-full bg-brand-orange/10 flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fa-solid fa-check text-brand-orange font-bold"></i>
+            </div>
+            <div>
+              <h5 class="font-bold text-brand-navy">24/7 Client Support</h5>
+              <p class="text-slate-500 text-sm">Always available to answer your questions and guide you through your property journey.</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary text-base px-8 py-4">
+          <i class="fa-solid fa-message"></i> Connect With Gurmeet
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ====================== FAQ SECTION ====================== -->
+<section id="faq" class="py-24 bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div class="section-eyebrow justify-center mb-4">Got Questions?</div>
+      <h2 class="font-display font-bold text-4xl md:text-5xl text-brand-navy mb-4">
+        Frequently Asked <span class="gradient-text">Questions</span>
+      </h2>
+      <p class="text-slate-600 text-lg">Everything you need to know about buying, selling, or renting property with Dilawri Properties.</p>
+    </div>
+
+    <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">What areas do you cover in Delhi?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            We specialize in properties across Paharganj, Karol Bagh, Connaught Place, NDMC, Chuna Mandi, Desh Bandhu Gupta Road, Ajmal Khan Road, and Central Delhi. We have extensive contacts and market knowledge in these premium locations.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">How long does a typical property deal take?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            The timeline varies depending on the property type and your requirements. Typically, a residential deal takes 1–3 months from first viewing to registration. For commercial properties, it may take 2–4 months. We expedite the process with our network and expertise.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">Do you help with legal documentation?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            Absolutely! We handle all legal documentation including title verification, deed preparation, registration assistance, and liaison with government offices. Our team works with trusted advocates to ensure smooth and transparent transactions.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">What's your commission or service fee?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            Our commissions are competitive and transparent, as per market standards. We discuss all costs upfront so there are no surprises.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">Can I rent out my property through you?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            Yes! We offer comprehensive property management and rental services. We handle tenant screening, rent collection, maintenance coordination, and all legal documentation. Your property is in safe hands with our 10+ years of experience.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item glass-card-light">
+        <button class="faq-trigger w-full flex items-center justify-between p-6 hover:bg-white/50 transition-colors">
+          <h3 class="font-bold text-brand-navy text-lg text-left">How do I get started with buying or selling?</h3>
+          <i class="fa-solid fa-chevron-down text-brand-orange transition-transform"></i>
+        </button>
+        <div class="faq-content max-h-0 overflow-hidden transition-all duration-300">
+          <p class="px-6 pb-6 text-slate-600 leading-relaxed">
+            Simply reach out to us via phone, WhatsApp, email, or our contact form. We'll understand your requirements, show you suitable properties, and guide you through the entire process. There's no obligation—just an honest conversation about your property needs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-12" data-aos="fade-up" data-aos-delay="200">
+      <p class="text-slate-600 mb-4">Still have questions? Reach out to us directly.</p>
+      <a href="#contact" class="btn-primary text-base px-8 py-4">
+        <i class="fa-solid fa-headset"></i> Contact Us Now
+      </a>
     </div>
   </div>
 </section>
@@ -1539,6 +1741,8 @@
           <li><a href="#gallery"      class="text-white/50 hover:text-brand-orange text-sm transition-colors">Gallery</a></li>
           <li><a href="#testimonials" class="text-white/50 hover:text-brand-orange text-sm transition-colors">Testimonials</a></li>
           <li><a href="#about"        class="text-white/50 hover:text-brand-orange text-sm transition-colors">About Us</a></li>
+          <li><a href="#owner"        class="text-white/50 hover:text-brand-orange text-sm transition-colors">Our Owner</a></li>
+          <li><a href="#faq"          class="text-white/50 hover:text-brand-orange text-sm transition-colors">FAQ</a></li>
           <li><a href="#contact"      class="text-white/50 hover:text-brand-orange text-sm transition-colors">Contact</a></li>
         </ul>
       </div>
@@ -1597,7 +1801,7 @@
     </div>
 
     <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <p class="text-white/30 text-xs">© 2024 Dilawri Properties. All rights reserved.</p>
+      <p class="text-white/30 text-xs">© 2026 Dilawri Properties. All rights reserved.</p>
       <p class="text-white/30 text-xs">Designed with <i class="fa-solid fa-heart text-brand-orange"></i> for Paharganj, Delhi</p>
     </div>
   </div>
@@ -1800,6 +2004,24 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     this.reset();
     setTimeout(() => { document.getElementById('form-success').style.display = 'none'; }, 6000);
   }, 1800);
+});
+
+/* ── FAQ Accordion ── */
+document.querySelectorAll('.faq-trigger').forEach(trigger => {
+  trigger.addEventListener('click', function() {
+    const faqItem = this.closest('.faq-item');
+    const isOpen = faqItem.classList.contains('open');
+    
+    // Close all other FAQs
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.classList.remove('open');
+    });
+    
+    // Toggle current FAQ
+    if (!isOpen) {
+      faqItem.classList.add('open');
+    }
+  });
 });
 </script>
 
